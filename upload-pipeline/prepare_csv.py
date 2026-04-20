@@ -11,8 +11,8 @@ Append-only: nếu games.csv đã có, chỉ thêm dòng mới cho zip chưa có
 (giữ nguyên User ID đã paste).
 
 Usage:
-    python3 prepare_csv.py                    # scan ./output
-    python3 prepare_csv.py --zips ./games     # scan folder khác
+    python3 prepare_csv.py                    # scan ./games
+    python3 prepare_csv.py --zips ./other     # scan folder khác
     python3 prepare_csv.py --csv games.csv
 """
 import argparse
@@ -50,7 +50,7 @@ def scan_zips(zips_dir: Path) -> list[tuple[str, str]]:
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("--zips", default="./output", help="folder chứa .zip (default: ./output)")
+    ap.add_argument("--zips", default="./games", help="folder chứa .zip (default: ./games)")
     ap.add_argument("--csv", default="games.csv", help="CSV path (default: games.csv)")
     args = ap.parse_args()
 

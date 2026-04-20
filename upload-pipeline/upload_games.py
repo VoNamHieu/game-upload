@@ -5,11 +5,11 @@
 ═══════════════════════════════════════════════════════════════
 
 Folder structure:
-  auto-sfx-tool/
+  upload-pipeline/
   ├── games.csv
-  ├── output/              ← original ZIPs
-  ├── fixed games/         ← fixed ZIPs (UUID_fixed.zip)
-  ├── covers/              ← cover images (UUID.jpg)
+  ├── games/               ← ZIPs to upload (drop here, filename = key)
+  ├── fixed games/         ← fixed ZIPs (<name>_fixed.zip)
+  ├── covers/              ← cover images (<name>.jpg, cùng tên zip)
   ├── results.csv          ← output with Share URL + Reupload URL
   └── upload_games.py
 
@@ -56,7 +56,7 @@ except ImportError:
 DEFAULT_HOST     = "http://34.149.226.142"
 DEFAULT_PASSWORD = "rezona666"
 DEFAULT_CSV      = "games.csv"
-DEFAULT_ZIPS     = "./output"
+DEFAULT_ZIPS     = "./games"
 DEFAULT_FIXED    = "./fixed games"
 DEFAULT_COVERS   = "./covers"
 DEFAULT_OUTPUT   = "results.csv"
