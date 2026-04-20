@@ -66,3 +66,4 @@ Sửa `config.py` để thay đổi:
 ## Cost
 
 ~$0.08-0.20 per game (Sonnet), tùy kích thước code.
+# game-upload
